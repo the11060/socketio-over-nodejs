@@ -1,1 +1,1 @@
-web: node signaler-ssl.js
+web: node web.js

@@ -2,7 +2,7 @@
   "name": "socketio-over-nodejs",
   "version": "3.0.1",
   "scripts": {
-    "start": "node web.js"
+    "start": "node signaler.js"
   },
   "engines": {
     "node": ">=0.6"
