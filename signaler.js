@@ -8,13 +8,14 @@ var file = new _static.Server('./static', {
 var app = require('http').createServer(serverCallback);
 
 function serverCallback(request, response) {
-    request.addListener('end', function () {
-        response.setHeader('Access-Control-Allow-Origin', '*');
-        response.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-        response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    //request.addListener('end', function () {
+    //    response.setHeader('Access-Control-Allow-Origin', '*');
+    //    response.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    //    response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-        file.serve(request, response);
-    }).resume();
+    //    file.serve(request, response);
+    //}).resume();
+	response.send('Hello World!');
 }
 
 var io = require('socket.io').listen(app, {
