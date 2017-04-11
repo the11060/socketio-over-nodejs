@@ -1,6 +1,8 @@
 var express = require('express');
-
+var path = require('path');
 var app = express.createServer(express.logger());
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(request, response) {
   // response.send('Hello World!');
